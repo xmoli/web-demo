@@ -22,7 +22,7 @@ ul{
 .top-bar{
     background-color:#f5f5f5;
     overflow:hidden;
-    line-height:300%;
+    line-height:35px;
     display:block;
     margin:0 auto;
     width:1190px;
@@ -54,14 +54,25 @@ ul{
     padding:24px 0;
     width:1190px;
 }
-.taobao-logo{
+.search-bar .taobao-logo{
     float:left;
+    overflow:hidden;
+    height:80px;
+    width:150px;
+    background-image:url("../img/taobao-logo.png");
+    background-repeat: no-repeat;
     margin-left:2em;
+}
+.taobao-logo a{
+    display:block;
+    text-indent:-999em;
+    text-align:center;
+    height:80px;
+    width:150px;
 }
 .search-bar>div{
     float:left;
     margin-left:90px;
-    margin-top:-9px;
 }
 
 .keywords-switch{
@@ -77,32 +88,37 @@ ul{
     background-image:linear-gradient(to right,#ff9000,#ff5000 100%);
     border-radius:6px 6px 0 0;
     padding:3px;
-    margin-bottom:-5px;
+    margin-bottom:-6px;
 }
 .search-bar form input{
     padding:0;
     margin:0;
 }
-.search {
-    outline:none;
+input.search {
+    outline-color:#f40;
     margin:0;
-    border:2px solid #ff4200;
+    padding:0;
+    border:1px solid #ff4200;
     border-radius:38px 0 0 38px;
     height:38px;
     width:472px;
-    text-indent: 20px;
+    text-indent: 2em;
+}
+input.search:focus{
+    border:none;
 }
 .search-button {
-    outline:none;
     border:none;
     margin-left:-5px;
-    height:44px;
+    height:40px;
     width:81px;
-    /* border-width:0;*/
     border-radius:0 44px 44px 0; 
-    background-image:linear-gradient(to right,#ff9000,#ff5000 100%);
+    background-image:linear-gradient(to right,#ff9000,#ff5000);
     color:white;
     font-weight: 700;
+}
+.search-button:hover{
+    cursor:pointer;
 }
 nav{
     background-image:linear-gradient(to right,#ff9000,#ff5000 100%);
@@ -121,7 +137,7 @@ nav{
     margin:0 5px;
     padding:0;
     height:30px;
-    line-height:200%;
+    line-height:30px;
 }
 .page-nav-wrapper>ul{
     margin:0;
@@ -153,6 +169,7 @@ nav{
     color:#666;
     font-size:14px;
     background-color: white;
+    margin-right:6px;
 }
 .service-bar>ul{
     margin:0;
@@ -166,23 +183,21 @@ nav{
     float:right;
     overflow:hidden;
     background-color:white;
-    width:250px;
     text-align:center;
-    margin-top:9px;
+    margin-top:10px;
+    width:290px;
 }
 .menber>div{
     clear:both;
 }
-.menber li{
-    margin:10px 0;
-}
 .login{
-    margin-left:8px;
+    /* position:relative; */
+    margin:10px auto;
 }
 .login li{
-    float:left;
+    display:inline-block;
     overflow:hidden;
-    background-image:linear-gradient(to right,#ff9000,#ff5000 100%);
+    background-image:linear-gradient(to right,#ff6600,#ff5000 100%);
     font-weight:700;
     font-size:16px;
     border-radius:4px;
@@ -190,7 +205,6 @@ nav{
     width:75px;
     height:25px;
     line-height:25px;
-    margin-right:16px;
 }
 
 .login a{
@@ -208,8 +222,42 @@ a{
 .service-ad div{
     float:left;
     overflow:hidden;
-    margin:9px 0 0 9px;
+    margin:10px 0;
+    margin-left:6px;
 }
-.service-ad div:last-child{
-    float:right;
+
+/*menber tab*/
+.notice li.current{
+    border-bottom:2px solid #f40;
+    font-weight:bold;
+}
+.notice li,.recharge li{
+    margin-left:11px;
+    color:#666;
+}
+.notice ul{
+    height:100px;
+}
+.recharge ul:last-child li{
+    display:none;
+}
+.recharge ul:first-child li:hover{
+    cursor:pointer;
+}
+.recharge li.current{
+    overflow:none;
+    border:1px solid #f40;
+    border-bottom:none;
+    padding:12px 12px 2px 12px;
+    background-color:white;
+}
+.recharge ul:last-child li.current{
+    display:block;
+    border:1px solid #f40;
+    margin-right:10px;
+    font-weight:normal;
+    text-align:left;
+    line-height:200%;
+    text-indent: 2em;
+    font-size:12px;
 }
