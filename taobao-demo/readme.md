@@ -1,3 +1,5 @@
+# 效果图
+![img](./taobao-shortcut.png)
 # 简要
 
 此例子只涉及html和css的排版练习，没有css动画和js方面的练习。
