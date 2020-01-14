@@ -1,0 +1,221 @@
+@import url(../normalize.css);
+@import url(../font-awesome-4.7.0/css/font-awesome.min.css);
+li {
+  float: left;
+  list-style-type: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.top-bar {
+  font-size: 12px;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  background-color: #333;
+  color: #bfbfbf;
+}
+.top-bar .wrapper {
+  min-width: 1126px;
+}
+.top-bar .wrapper .left {
+  float: left;
+}
+.top-bar .wrapper .left li:after {
+  content: "|";
+  color: #999999;
+  margin: 0 6px;
+}
+.top-bar .wrapper .left li:last-child:after {
+  content: "";
+}
+.top-bar .wrapper .right {
+  float: right;
+}
+.top-bar .wrapper .right li:before {
+  content: "|";
+  color: #999999;
+  margin: 0 6px;
+}
+.top-bar .wrapper .right li:first-child:before {
+  content: "";
+}
+.top-bar .wrapper .right li:last-child {
+  margin-left: 12px;
+  background-color: #595959;
+}
+.top-bar .wrapper .right li:last-child:before {
+  content: "";
+}
+.top-bar .wrapper .right li:last-child em {
+  font-size: 16px;
+  margin-right: 4px;
+}
+.top-nav {
+  width: 1126px;
+  margin: 0 auto;
+  margin-top: 30px;
+  overflow: hidden;
+  color: #333;
+}
+.top-nav div.logo {
+  float: left;
+  text-indent: -999em;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: #ff6700;
+  background-image: url(./mi-logo.png);
+}
+.top-nav div.logo a {
+  display: block;
+}
+.top-nav ul {
+  position: relative;
+  left: 20%;
+  font-size: 16px;
+  font-weight: blod;
+}
+.top-nav ul li {
+  margin: 0 12px;
+  line-height: 50px;
+}
+.top-nav form.search {
+  overflow: hidden;
+  float: right;
+  height: 50px;
+  width: 269px;
+  padding: 0;
+  margin: 0;
+  color: #b3b3b3;
+}
+.top-nav form.search input {
+  float: left;
+  outline: none;
+  height: 48px;
+  padding: 0 10px;
+  width: 195px;
+  border: 1px solid #a6a6a6;
+}
+.top-nav form.search input:hover {
+  border-color: #ff6700;
+}
+.top-nav form.search .search-btn {
+  overflow: hidden;
+  float: left;
+  border: 1px solid #a6a6a6;
+  border-left: none;
+  margin-left: -1px;
+}
+.top-nav form.search .search-btn em {
+  display: block;
+  line-height: 50px;
+  text-align: center;
+  height: 48px;
+  width: 50px;
+}
+.top-nav form.search .search-btn-focus {
+  overflow: hidden;
+  float: left;
+  border: 1px solid #a6a6a6;
+  border-left: none;
+  margin-left: -1px;
+  border-color: #ff6700;
+  background-color: #ff6700;
+  color: white;
+}
+.top-nav form.search .search-btn-focus em {
+  display: block;
+  line-height: 50px;
+  text-align: center;
+  height: 48px;
+  width: 50px;
+}
+div.ad1 {
+  background-image: url(./banner1.jpg);
+}
+div.ad2 {
+  background-image: url(./banner2.jpg);
+}
+div.ad3 {
+  background-image: url(./banner3.jpg);
+}
+div.banner {
+  width: 1126px;
+  height: 422px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #ff8080;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+div.banner ul.category {
+  float: left;
+  width: 20%;
+  background-color: rgba(105, 101, 101, 0.6);
+  overflow: hidden;
+  padding: 12px 0;
+}
+div.banner ul.category li {
+  width: 100%;
+  line-height: 40px;
+  height: 40px;
+  text-indent: 2em;
+  clear: both;
+  color: white;
+}
+div.banner ul.category li:after {
+  content: ">";
+  display: block;
+  float: right;
+  transform: translateX(-1em);
+  font-size: 20px;
+  font-weight: blod;
+}
+div.banner ul.category li:hover {
+  background-color: #ff6700;
+}
+div.banner .previous-btn,
+div.banner .next-btn {
+  font-size: 45px;
+  transform: scaleY(1.5);
+  color: grey;
+  border-radius: 0 3px 3px 0;
+  float: left;
+  height: 46px;
+  line-height: 46px;
+  position: relative;
+  top: 50%;
+  margin-top: -23px;
+}
+div.banner .previous-btn:hover,
+div.banner .next-btn:hover {
+  background-color: rgba(205, 201, 201, 0.5);
+}
+div.banner .next-btn {
+  float: right;
+  border-radius: 3px 0 0 3px;
+}
+div.banner ul.ad-btn {
+  position: relative;
+  top: 90%;
+  right: 5%;
+  color: red;
+  overflow: hidden;
+  float: right;
+}
+div.banner ul.ad-btn li {
+  text-align: right;
+  margin: 0 8px;
+  border: 3px solid rgba(205, 201, 201, 0.5);
+  background-color: rgba(105, 101, 101, 0.5);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+div.banner ul.ad-btn .active {
+  background-color: rgba(205, 201, 201, 0.8);
+}
