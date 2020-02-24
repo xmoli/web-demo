@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inline-block排版</title>
+    <style>
+        .cow{
+            border: 1px solid grey;
+            width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0;
+            padding: 4px;
+        }
+        .col-2x{
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        section{
+            font-size: 50px;
+            background-color: goldenrod;
+            margin: 4px;
+        }
+        .left article section{
+            width: 492px;
+            height: 492px;
+            line-height: 492px;
+        }
+        .right article section{
+            display: inline-block;
+            width: 242px;
+            height: 242px;
+            line-height: 242px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cow">
+        <div class="col-2x left">
+            <article>
+                <section>1</section>
+            </article>
+        </div>
+        <div class="col-2x right">
+            <article>
+                <section>2</section>
+                <section>3</section>
+                <section>4</section>
+                <section>5</section>
+            </article>
+        </div>
+    </div>
+</body>
+</html>

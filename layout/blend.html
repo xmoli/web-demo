@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float与inline-block混合使用</title>
+    <style>
+        .cow{
+            width: 1000px;
+            margin: 0 auto;
+            border: 1px solid grey;
+            font-size: 0;
+            padding: 4px;
+        }
+        .col{
+            display:inline-block;
+        }
+        .x2{
+            width: 50%;
+        }
+        section{
+            font-size: 50px;
+            float:left;
+            text-align: center;
+            background-color: gold; 
+        }
+        .left section{
+            width: 492px;
+            height: 492px;
+            margin: 4px;
+            line-height: 492px;
+        }
+        .right section{
+            width: 242px;
+            height: 242px;
+            line-height: 242px;
+            margin: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cow">
+        <div class="col x2 left">
+            <section>1</section>
+        </div>
+        <div class="col x2 right">
+            <section>2</section>
+            <section>3</section>
+            <section>4</section>
+            <section>5</section>
+        </div>
+    </div>
+</body>
+</html>
