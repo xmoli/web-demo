@@ -142,9 +142,11 @@ div.ad2{
 div.ad3{
     background-image: url(./banner3.jpg);
 }
+
+@category-height: 422px;
+
 div.banner{
     width: @page-width;
-    height: 422px;
     margin: 0 auto;
     margin-top: 30px;
     background-color: lighten(red,25%);
@@ -178,6 +180,32 @@ div.banner{
             }
         }
     }
+    .category-items{
+        display: none;
+    }
+    .category-items.active{
+        position:relative;
+        width: 80%;
+        left: 20%;
+        z-index: 1;
+        background-color: rgba(105,101,101,.7);
+        ul{
+            display: block;
+            overflow: hidden;
+            border: 1px solid red;
+            float: left;
+            li{
+                clear: both;
+                background-color: white;
+                line-height: 60px;
+                text-align: center;
+                height:60px;
+                line-height: 50px;
+                width: 80px;
+                margin: 20px 30px;
+            }
+        }
+    }
     .previous-btn,.next-btn{
         font-size: 45px;
         transform: scaleY(1.5);
@@ -186,9 +214,7 @@ div.banner{
         float:left;
         height: 46px;
         line-height: 46px;
-        position: relative;
-        top: 50%;
-        margin-top: -23px;
+        margin-top: 200px;
         &:hover{
             background-color: rgba(205,201,201,.5);
         }
@@ -199,7 +225,7 @@ div.banner{
     }
     ul.ad-btn{
         position:relative;
-        top: 90%;
+        top: 400px;
         right: 5%;
         color: red;
         overflow: hidden;

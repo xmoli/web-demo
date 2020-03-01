@@ -143,7 +143,6 @@ div.ad3 {
 }
 div.banner {
   width: 1126px;
-  height: 422px;
   margin: 0 auto;
   margin-top: 30px;
   background-color: #ff8080;
@@ -178,6 +177,32 @@ div.banner ul.category li:after {
 div.banner ul.category li:hover {
   background-color: #ff6700;
 }
+div.banner .category-items {
+  display: none;
+}
+div.banner .category-items.active {
+  position: relative;
+  width: 80%;
+  left: 20%;
+  z-index: 1;
+  background-color: rgba(105, 101, 101, 0.7);
+}
+div.banner .category-items.active ul {
+  display: block;
+  overflow: hidden;
+  border: 1px solid red;
+  float: left;
+}
+div.banner .category-items.active ul li {
+  clear: both;
+  background-color: white;
+  line-height: 60px;
+  text-align: center;
+  height: 60px;
+  line-height: 50px;
+  width: 80px;
+  margin: 20px 30px;
+}
 div.banner .previous-btn,
 div.banner .next-btn {
   font-size: 45px;
@@ -187,9 +212,7 @@ div.banner .next-btn {
   float: left;
   height: 46px;
   line-height: 46px;
-  position: relative;
-  top: 50%;
-  margin-top: -23px;
+  margin-top: 200px;
 }
 div.banner .previous-btn:hover,
 div.banner .next-btn:hover {
@@ -201,7 +224,7 @@ div.banner .next-btn {
 }
 div.banner ul.ad-btn {
   position: relative;
-  top: 90%;
+  top: 400px;
   right: 5%;
   color: red;
   overflow: hidden;
