@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>侧边栏</title>
+    <style>
+        aside ul {
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
+        }
+        aside.mobie>ul {
+            width: 50%;
+            max-height: 100%;
+
+            border-radius: 4px;
+            border: 3px solid rgba(200,200,200,0.8);
+            
+            position: fixed;
+        }
+        aside.mobie>ul>li {
+            background-color: gold;
+            color: white;
+            
+            max-width: 100%;
+
+            font-size: 15px;
+            line-height: 30px;
+            text-indent: 1em;
+        }
+        aside.mobie>ul>li>ul.hidden li {
+            display: none;
+        }
+        aside.mobie>ul>li>ul.show {
+            display: block;
+            background-color: goldenrod;
+            color: black;
+        }
+        aside.mobie>ul>li>ul.show li{
+            display: block;
+            background-color: rgba(0,0,0,0);
+            color: black;
+
+            height: 25px;
+
+            font-size: 14px;
+            line-height: 25px;
+            text-indent: 2em;
+        }
+        aside.mobie>ul>li:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <aside class="mobie">
+        <ul>
+            <li class="menu-list">1
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </li>
+            <li class="menu-list">2
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                </ul>
+            </li>
+            <li class="menu-list">3
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </li>
+            <li class="menu-list">4
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <script>
+        const menu = document.getElementsByClassName("menu-list");
+        for (let i = menu.length-1; i >= 0; i--) {
+            menu[i].onclick = openlist(i);
+        }
+        closelist();
+
+        function closelist() {
+            for (let m of menu) {
+                m.firstElementChild.className = "hidden";
+             }
+        }
+        function openlist(id){
+            return function() {
+                closelist();
+                for (let i = menu.length-1; i >= 0; i--) {
+                    if (id === i){
+                        menu[i].firstElementChild.className = "show";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
